@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Create Resource</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="content">
+
+<h1>Create Resource</h1>
+
+<form id="resourceForm">
+
+<label>Resource Type</label>
+
+<select id="resourceType">
+
+<option>S3</option>
+
+<option>IAM</option>
+
+<option>RDS</option>
+
+<option>VPC</option>
+
+<option>EKS</option>
+
+</select>
+
+<br><br>
+
+<label>Environment</label>
+
+<select id="environment">
+    <option>DEV</option>
+    <option>UAT</option>
+    <option>PROD</option>
+</select>
+
+<br><br>
+<label>Resource Name</label>
+
+<input
+type="text"
+id="resourceName"
+/>
+
+<br><br>
+
+<br><br>
+
+<label>IaC Tool</label>
+
+<select id="iacTool">
+
+<option>Terraform</option>
+
+<option>CloudFormation</option>
+
+<option>Python</option>
+
+</select>
+
+<br><br>
+
+<button type="submit">
+
+Create
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+document
+.getElementById("resourceForm")
+.addEventListener(
+"submit",
+async function(e){
+
+e.preventDefault();
+
+const resource_type =
+document.getElementById(
+"resourceType"
+).value;
+
+const resource_name =
+document.getElementById(
+"resourceName"
+).value;
+
+const environment =
+document.getElementById(
+"environment"
+).value;
+
+const iac_tool =
+document.getElementById(
+"iacTool"
+).value;
+
+await fetch(
+"http://127.0.0.1:8000/create-resource",
+{
+method:"POST",
+headers:{
+"Content-Type":
+"application/json"
+},
+body: JSON.stringify({
+resource_type,
+resource_name,
+environment,
+iac_tool
+})
+}
+);
+
+alert("Request Created");
+
+});
+
+</script>
+
+</body>
+</html>

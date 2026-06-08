@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Platform Engineering Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>CMS Portal</h2>
+
+    <a href="/dashboard">Dashboard</a>
+
+    <a href="/create-resource-page">
+        Create Resource
+    </a>
+
+    <a href="/my-requests-page">
+        My Requests
+    </a>
+
+    <a href="/approvals-page">
+        Approvals
+    </a>
+
+    <a href="/workflow-page">
+        Workflows
+    </a>
+
+</div>
+
+<div class="content">
+
+<h1>Platform Engineering Dashboard</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Total Requests</h3>
+        <h1 id="total">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Pending</h3>
+        <h1 id="pending">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Approved</h3>
+        <h1 id="approved">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Success</h3>
+        <h1 id="success">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>CloudFormation</h3>
+        <h1 id="cloudformation">0</h1>
+    </div>
+
+    <div class="card">
+        <h3>Terraform</h3>
+        <h1 id="terraform">0</h1>
+    </div>
+
+</div>
+
+</div>
+<a href="/monitoring-page">
+Monitoring
+</a>
+
+<a href="/inventory-page">
+Resource Inventory
+</a>
+<a href="/templates-page">
+Resource Templates
+</a>
+
+<a href="/pipeline-page">
+GitHub Actions
+</a>
+
+<script src="/static/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Approvals</title>
+
+<link rel="stylesheet"
+href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="content">
+
+<h1>Pending Approvals</h1>
+<h1>Approval Matrix</h1>
+
+<p>
+DEV → Approved<br>
+QA → Team Lead Approval<br>
+UAT → Manager Approval<br>
+PROD → Security Approval
+</p>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>Request ID</th>
+<th>Resource</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="approvalTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="/static/approvals.js">
+
+</script>
+
+</body>
+
+</html>
